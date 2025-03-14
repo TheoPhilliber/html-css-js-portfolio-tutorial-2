@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #0a192f; 
+            color: white; 
+            position: relative;
+            overflow-x: hidden;
+        }
+        .container { width: 85%; margin: auto; }
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: rgba(0, 0, 0, 0.9); 
+            color: white; 
+            padding: 15px 30px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+            border-bottom: 2px solid white;
+        }
+        .header a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 1.1em; }
+        .header a:hover { text-decoration: underline; }
+        .section { padding: 40px 20px; }
+        .about-section {
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 40px; 
+            border-radius: 15px;
+            border: 2px solid white;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .about-section img {
+            width: 180px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .project { 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 30px; 
+            margin-bottom: 50px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
+            border: 2px solid white; 
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .project .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .project .image-container img {
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .project .large-img { width: 500px; height: auto; }
+        .project .medium-img { width: 250px; height: auto; }
+        .project .text-container {
+            flex: 1;
+        }
+        .resume-container { 
+            text-align: center; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); 
+            border: 2px solid white; 
+        }
+        .resume-container iframe { 
+            width: 100%; 
+            height: 90vh; 
+            border: none; 
+            background: white; 
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Your Name</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#project1">Project 1</a>
+            <a href="#project2">Project 2</a>
+            <a href="#project3">Project 3</a>
+            <a href="#project4">Project 4</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </div>
+    <div class="container">
+        <section class="section about-section" id="about">
+            <h1>About Me</h1>
+            <img src="./assets/your-photo.jpg" alt="Your Photo">
+            <p><strong>Your Name</strong> - Mechatronics Engineer with expertise in robotics, electrical design, and firmware development.</p>
+        </section>
+
+        <!-- Project Sections -->
+        <div class="project" id="project1">
+            <div class="image-container">
+                <img src="./assets/project1-main.jpg" alt="Vorta Particle Abatement System Main" class="large-img">
+                <div>
+                    <img src="./assets/project1-thumb1.jpg" alt="Project 1 Thumbnail 1" class="medium-img">
+                    <img src="./assets/project1-thumb2.jpg" alt="Project 1 Thumbnail 2" class="medium-img">
+                </div>
+            </div>
+            <div class="text-container">
+                <h3>Vorta Particle Abatement System</h3>
+                <h4>Purpose</h4>
+                <p>A system designed to effectively remove particles from semiconductor EFEMs and wafer-handling equipment.</p>
+                <h4>Description</h4>
+                <p>The system utilizes a specialized Mobile Electrostatic Carrier (MESC), which fits within a standard FOUP. The MESC is charged to a high voltage using pogo pins, then transported to different stations in the EFEM. The stored voltage on the MESC attracts and captures airborne particles, reducing contamination.</p>
+                <h4>Benefits</h4>
+                <p>Enhancing semiconductor equipment cleanliness improves yield. By integrating into a standard FOUP, the system ensures broad compatibility with EFEMs without requiring modifications. Traditional cleaning methods require manual intervention, which is costly and impractical in vacuum environments. This system automates and streamlines the process.</p>
+                <h4>My Contribution</h4>
+                <p>As the lead engineer, I oversee all testing, analyze results, and implement iterative improvements. While an external consulting team initially designed the PCB, I have since taken full responsibility for revisions and reworks, refining the system for enhanced performance and reliability.</p>
+            </div>
+        </div>
+
+        <section class="section resume-container" id="resume">
+            <h2>Resume</h2>
+            <iframe src="./assets/your-resume.pdf"></iframe>
+            <br>
+            <a href="./assets/your-resume.pdf" download>Download My Resume</a>
+        </section>
+    </div>
+</body>
+</html>
